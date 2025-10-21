@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company",
+  "info": {
+    "singularName": "companies",
+    "pluralName": "company",
+    "displayName": "Companies"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clients.clients",
+      "inversedBy": "companies"
+    },
+    "company_contacts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client-contacts.client-contacts",
+      "mappedBy": "company"
+    }
+  }
+}

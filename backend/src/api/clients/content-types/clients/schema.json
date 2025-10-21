@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "client",
+  "info": {
+    "singularName": "clients",
+    "pluralName": "client",
+    "displayName": "Clients"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FullName": {
+      "type": "string"
+    },
+    "ClientPhoto": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "BTWNumber": {
+      "type": "string"
+    },
+    "Remarks": {
+      "type": "blocks"
+    },
+    "client_contacts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client-contacts.client-contacts"
+    },
+    "companies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::companies.companies",
+      "mappedBy": "owner"
+    }
+  }
+}

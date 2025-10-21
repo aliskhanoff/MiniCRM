@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gambling_machines",
+  "info": {
+    "singularName": "gambling-machine",
+    "pluralName": "gambling-machines",
+    "displayName": "GamblingMachines"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "LicenceNumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "PurchaseDate": {
+      "type": "date"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gambling-machine-brands.gambling-machine-brands"
+    },
+    "supplier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gamblin-machines-supplier.gamblin-machines-supplier"
+    },
+    "type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gambling-machine-type.gambling-machine-type"
+    }
+  }
+}

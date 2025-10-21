@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gambling_machine_brand",
+  "info": {
+    "singularName": "gambling-machine-brands",
+    "pluralName": "gambling-machine-brand",
+    "displayName": "GamblingMachineBrands"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

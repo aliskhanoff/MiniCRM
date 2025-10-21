@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gamblin_machines_suppliers",
+  "info": {
+    "singularName": "gamblin-machines-supplier",
+    "pluralName": "gamblin-machines-suppliers",
+    "displayName": "GamblinMachinesSuppliers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

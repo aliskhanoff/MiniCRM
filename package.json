@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend develop",
+    "dev:desktop": "pnpm --filter desktop start",
+    "dev": "concurrently  \"yarn dev:backend\" \"yarn dev:frontend\"",
+    "dev-all": "concurrently \"yarn dev:frontend\" \"yarn dev:backend\" \"yarn dev:desktop\"",
+    "lint": "eslint \"{frontend,desktop,backend}/**/*.{ts,tsx,js,jsx}\"",
+    "prepare": "husky install",
+    "format": "prettier --write \"{frontend,desktop,backend}/**/*.{ts,tsx,js,jsx,json,md}\"",
+    "lint-staged": "lint-staged",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.52.5",
+    "@types/testing-library__jest-dom": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/ui": "^3.2.4",
+    "concurrently": "^8.2.0",
+    "eslint": "^9.38.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^8.0.0",
+    "jsdom": "^27.0.1",
+    "lint-staged": "^16.2.5",
+    "prettier": "^3.6.2"
+  },
+  "workspaces": [
+    "frontend",
+    "backend",
+    "desktop"
+  ],
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "^4.1.0"
+  }
+}

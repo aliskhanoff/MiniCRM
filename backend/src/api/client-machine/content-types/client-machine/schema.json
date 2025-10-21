@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "client_machines",
+  "info": {
+    "singularName": "client-machine",
+    "pluralName": "client-machines",
+    "displayName": "ClientMachines"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ContractFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "DeliveryDate": {
+      "type": "datetime"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::companies.companies"
+    },
+    "gambling_machine": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gambling-machine.gambling-machine"
+    }
+  }
+}
