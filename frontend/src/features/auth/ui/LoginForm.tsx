@@ -1,5 +1,6 @@
 import { Label, TextInput, Button } from 'flowbite-react';
 import { useLogin } from '../model/useLogin';
+import { TextBox } from '@/shared/ui/input/textbox';
 
 export const LoginForm = () => {
   const { register, handleSubmit, errors, onSubmit } = useLogin();
@@ -11,15 +12,14 @@ export const LoginForm = () => {
     >
       <h1 className="text-3xl">Sign in</h1>
 
-      <div>
+      <div className="flex flex-col gap-2">
         <Label htmlFor="identifier">Email</Label>
-        <TextInput
-          className="ring-1 ring-blue-500 rounded p-1 outline-none"
-          id="identifier"
-          type="email"
-          placeholder="Your email or username"
+
+        <TextBox
           {...register('identifier', { required: 'Email is required' })}
+          className="ring-1 focus:ring-2 transition-all duration-200 outline-none ring-blue-500 px-2 py-1.5 rounded-sm"
         />
+
         {errors.identifier && <p className="text-red-500 text-sm">{errors.identifier.message}</p>}
       </div>
 
