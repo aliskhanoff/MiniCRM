@@ -8,7 +8,7 @@ export const LoginForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-4 max-w-md mx-auto mt-10 justify-center items-center"
+      className="flex flex-col h-[100vh] gap-4 max-w-md mx-auto mt-10 justify-center items-center"
     >
       <h1 className="text-3xl">Sign in</h1>
 
