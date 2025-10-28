@@ -4,9 +4,13 @@ import NetworkState from '@/shared/ui/state/networkstate';
 import React from 'react';
 
 export const LoginPage: React.FC = () => {
-  return <Template>
+  return (
+    <div>
+      <Template>
     <NetworkState onlineContent={<LoginForm />} />
-    </Template> ;
+    </Template> 
+    </div>
+  );
 };
 
 export default LoginPage;
