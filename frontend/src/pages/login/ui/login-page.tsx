@@ -7,8 +7,8 @@ export const LoginPage: React.FC = () => {
   return (
     <div>
       <Template>
-    <NetworkState onlineContent={<LoginForm />} />
-    </Template> 
+        <NetworkState onlineContent={<LoginForm />} />
+      </Template>
     </div>
   );
 };
