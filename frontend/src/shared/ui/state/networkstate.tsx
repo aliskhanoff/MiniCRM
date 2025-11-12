@@ -1,10 +1,10 @@
-import type { SharedProps } from '@/shared/models'
+import type { SharedComponentProps } from '@/shared'
 import { useEffect, useState, cloneElement } from 'react'
 import { WithClassName } from '../utils';
 import OfflineInfo from './offline-info';
 
 
-type NetworkStateProps = SharedProps<HTMLDivElement> & {
+type NetworkStateProps = SharedComponentProps<HTMLDivElement> & {
     onlineContent?: React.ReactNode;
     offlineContent?: React.ReactNode;
 };

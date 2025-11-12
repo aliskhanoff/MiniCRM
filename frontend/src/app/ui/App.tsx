@@ -1,11 +1,11 @@
 import '@/app/styles/index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { NotFound, LoginPage } from '@/pages';
-import { useAuth, type SharedProps, WithClassName } from '@/shared';
+import { useAuth, type SharedComponentProps, WithClassName } from '@/shared';
 import { GiRollingDices } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
-export const HomePage = ({ className, ...rest }: SharedProps) => {
+export const HomePage = ({ className, ...rest }: SharedComponentProps) => {
   return (
     <WithClassName className={className} {...rest}>
       <div className={`flex w-full items-center p-4 bg-slate-100 ${className}`}>
