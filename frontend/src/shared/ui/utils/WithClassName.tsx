@@ -1,7 +1,7 @@
-import type { SharedProps } from '@/shared/models';
+import type { SharedComponentProps } from '@/shared/models';
 import React from 'react';
 
-export const WithClassName = ({ className, children, ...rest }: SharedProps) => {
+export const WithClassName = ({ className, children, ...rest }: SharedComponentProps) => {
   if (className === undefined || className === '') return React.cloneElement(children, { ...rest });
 
   return React.cloneElement(children, {
